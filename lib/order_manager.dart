@@ -16,7 +16,9 @@ class OrderManager {
         orderId, customer, List.from(cart.products), totalAmount, orderDate);
     _orders.add(order);
     cart.products.clear();
+    print('===========================');
     print('Order placed successfully');
+    print('===========================');
   }
 
   //getters

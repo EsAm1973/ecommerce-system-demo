@@ -15,9 +15,11 @@ class Order {
     this._orderDate,
   );
   void displayOrderDetails() {
+    print('===========================');
     print('Order ID: $_id');
     print('Customer: ${_customer.username}');
     print('Order Date: $_orderDate');
     print('Total Amount: \$${_totalAmount.toStringAsFixed(2)}');
+    print('===========================');
   }
 }

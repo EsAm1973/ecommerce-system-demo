@@ -13,12 +13,14 @@ abstract class User {
   get username => _username;
   get password => _password;
   get email => _email;
-  
+
   //display details of user
   void displayDetails() {
+    print('===========================');
     print('Username: $_username');
     print('Password: $_password');
     print('Email: $_email');
+    print('===========================');
   }
 
   //Abstract Method

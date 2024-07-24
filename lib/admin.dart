@@ -1,4 +1,3 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:ecommerce_system/Product.dart';
 import 'package:ecommerce_system/User.dart';
 
@@ -18,11 +17,20 @@ class Admin extends User {
     print('Product ${productToRemove.name} removed');
   }
 
+  void displayAllProduct() {
+    print('===============================');
+    for (var product in products) {
+      product.displayProductDetails();
+      print('==========================');
+    }
+  }
+
   //Overrided Method from User Class
   @override
   void resetPassword(String newPassword) {
     if (newPassword.length > 8) {
       setPasword = newPassword;
+      print('Password to $username reseted');
     } else {
       print(
           'Password reset failed. Password does not meet the required criteria.');

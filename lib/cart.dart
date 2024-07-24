@@ -9,10 +9,9 @@ class ShoppingCart {
     print('Product ${product.name} added to cart');
   }
 
-  void removeCartProduct(String productId) {
-    var productToRemove =
-        products.firstWhere((product) => product.id == productId);
-    products.remove(productToRemove);
+  void removeCartProduct(Product product) {
+    products.remove(product);
+    print('Removed ${product.name} from the cart');
   }
 
   double calculateTotal() {
@@ -24,9 +23,15 @@ class ShoppingCart {
   }
 
   void displayCartItems() {
-    print('Shopping Cart Items:');
-    for (var product in products) {
-      print('${product.name} - \$${product.price.toStringAsFixed(2)}');
+    if (products.isNotEmpty) {
+      print('Shopping Cart Items:');
+      print('===========================');
+      for (var product in products) {
+        print('${product.name} - \$${product.price.toStringAsFixed(2)}');
+      }
+      print('===========================');
+    } else {
+      print('Cart is empty');
     }
   }
 }

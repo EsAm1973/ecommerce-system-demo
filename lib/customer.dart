@@ -20,6 +20,7 @@ class Customer extends User {
   void resetPassword(String newPassword) {
     if (newPassword.length > 8) {
       setPasword = newPassword;
+      print('Password to $username reseted');
     } else {
       print(
           'Password reset failed. Password does not meet the required criteria.');
