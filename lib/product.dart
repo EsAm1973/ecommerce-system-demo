@@ -9,11 +9,9 @@ class Product {
   get name => _name;
   get price => _price;
   void displayProductDetails() {
-    print('===========================');
     print('ID: $_id');
     print('Name: $_name');
     print('Description: $_description');
     print('Price: $_price');
-    print('===========================');
   }
 }

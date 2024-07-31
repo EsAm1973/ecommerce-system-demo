@@ -9,7 +9,9 @@ class Customer extends User {
   viewOrderHistory(List<Order> orders) {
     if (orders.isNotEmpty) {
       for (var order in orders) {
-        order.displayOrderDetails();
+        if (order.customer == this) {
+          order.displayOrderDetails();
+        }
       }
     } else {
       print('Not found orders');

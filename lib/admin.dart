@@ -18,7 +18,6 @@ class Admin extends User {
   }
 
   void displayAllProduct() {
-    print('===============================');
     for (var product in products) {
       product.displayProductDetails();
       print('==========================');

@@ -50,7 +50,7 @@ void main() {
         print('5. View my Information');
         print('6. Logout');
 
-        print('Enter your choice');
+        print('Enter your choice (1-6)');
         int choice = int.parse(stdin.readLineSync()!);
 
         switch (choice) {
@@ -72,7 +72,7 @@ void main() {
             admin.removeProduct(id);
             break;
           case 3:
-            print('All Product in system:');
+            print('All Products in system:');
             admin.displayAllProduct();
             break;
           case 4:

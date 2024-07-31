@@ -14,6 +14,9 @@ class Order {
     this._totalAmount,
     this._orderDate,
   );
+  
+  Customer get customer => _customer;
+
   void displayOrderDetails() {
     print('===========================');
     print('Order ID: $_id');
